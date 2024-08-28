@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Droplet Text Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            color: #00f;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3rem;
+        }
+
+        .droplet-text {
+            display: inline-block;
+            position: relative;
+        }
+
+        .droplet-text span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(-100vh) scale(0.5);
+            animation: drop 2s ease forwards;
+            position: relative;
+        }
+
+        @keyframes drop {
+            0% {
+                opacity: 0;
+                transform: translateY(-100vh) scale(0.5);
+                color: transparent;
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0) scale(1.2);
+                background-image: url("https://www.transparentpng.com/thumb/water-drop/iiB5V1-water-drop-clipart-hd.png");
+                background-size: 20px 20px;
+                background-repeat: no-repeat;
+                color: transparent;
+            }
+            70% {
+                transform: translateY(-20px) scale(1);
+                background-image: url("https://r2.erweima.ai/imgcompressed/img/compressed_bb2faacae7972ddf275d87f936692fc4.webp");
+                background-size: 100% 100%;
+                color: grey;
+                color: transparent;
+            }
+            85% {
+                transform: translateY(10px) scale(1);
+                color: #00f;
+                background-image: none;
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="droplet-text">
+        <span>W</span>
+        <span>a</span>
+        <span>t</span>
+        <span>e</span>
+        <span>r</span>
+        <span> </span>
+        <span>D</span>
+        <span>r</span>
+        <span>o</span>
+        <span>p</span>
+    </div>
+</body>
+</html>
